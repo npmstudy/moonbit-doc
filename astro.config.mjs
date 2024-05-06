@@ -27,7 +27,7 @@ export default defineConfig({
             { label: "Why Moonbit", link: "/concepts/why/" },
             { label: "Morden", link: "/concepts/morden/" },
             { label: "Wasm", link: "/concepts/wasm/" },
-            { label: "Performence", link: "/concepts/performence/" },
+            { label: "Performence", link: "/concepts/performance/" },
           ],
         },
         {

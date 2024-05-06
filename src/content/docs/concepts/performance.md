@@ -12,4 +12,4 @@ Writing a good guide requires thinking about what your users are trying to do.
 
 ## Further reading
 
-- Read [about how-to guides](https://diataxis.fr/how-to-guides/) in the Diátaxis framework
+- Read [MoonBit adds JS backend, up to 25x faster than native JS](https://www.moonbitlang.com/blog/js-support) in the Diátaxis framework
