@@ -65,3 +65,6 @@ cd site
 在这个领域，有很多工作正在推进当中。如果你希望它变得更好，可以参阅 Webassembly 工作组。
 
 https://developer.mozilla.org/zh-CN/docs/WebAssembly/Rust_to_Wasm#%E5%9C%A8%E7%BD%91%E7%AB%99%E4%B8%8A%E4%BD%BF%E7%94%A8%E6%88%91%E4%BB%AC%E7%9A%84%E5%8C%85
+
+
+https://github.com/moonbitlang/moonbit-docs/blob/main/examples/wasm-gc/index.html

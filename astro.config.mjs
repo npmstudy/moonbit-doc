@@ -17,6 +17,7 @@ export default defineConfig({
             { label: "Getting Started", link: "/start/first/" },
             { label: "Install", link: "/start/install/" },
             { label: "Editor Setup", link: "/start/editor/" },
+            { label: "Hello world", link: "/start/helloworld/" },
             { label: "Upgrade Moonbit", link: "/start/upgrade/" },
           ],
         },
@@ -27,7 +28,7 @@ export default defineConfig({
             { label: "Why Moonbit", link: "/concepts/why/" },
             { label: "Morden", link: "/concepts/morden/" },
             { label: "Wasm", link: "/concepts/wasm/" },
-            { label: "Performence", link: "/concepts/performence/" },
+            { label: "Performence", link: "/concepts/performance/" },
           ],
         },
         {
