@@ -25,6 +25,7 @@ export default defineConfig({
           items: [
             // Each item here is one entry in the navigation menu.
             { label: "Why Moonbit", link: "/concepts/why/" },
+            { label: "Morden", link: "/concepts/morden/" },
             { label: "Wasm", link: "/concepts/wasm/" },
             { label: "Performence", link: "/concepts/performence/" },
           ],
@@ -70,10 +71,10 @@ export default defineConfig({
           label: "Integrations",
           items: [
             // Each item here is one entry in the navigation menu.
-            { label: "core lib", link: "/guides/example/" },
-            { label: "test", link: "/guides/example/" },
-            { label: "ffi", link: "/guides/example/" },
-            { label: "package manager", link: "/guides/example/" },
+            { label: "build", link: "/integrations/build/" },
+            { label: "test", link: "/integrations/test/" },
+            { label: "ffi", link: "/integrations/ffi/" },
+            { label: "package manager", link: "/integrations/package/" },
           ],
         },
         {
