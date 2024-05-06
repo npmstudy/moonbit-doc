@@ -17,6 +17,7 @@ export default defineConfig({
             { label: "Getting Started", link: "/start/first/" },
             { label: "Install", link: "/start/install/" },
             { label: "Editor Setup", link: "/start/editor/" },
+            { label: "Hello world", link: "/start/helloworld/" },
             { label: "Upgrade Moonbit", link: "/start/upgrade/" },
           ],
         },

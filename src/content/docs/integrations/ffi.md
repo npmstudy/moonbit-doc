@@ -7,6 +7,7 @@ You can use foreign function in MoonBit through FFI to interact with the hosting
 
 https://www.moonbitlang.com/docs/ffi-and-wasm-host
 
+
 ## ffi mvp
 
 The only way right now is to use inline js + abstract type:
@@ -26,6 +27,47 @@ So I assume it will need dynamic import to use third part js libraries
 or maybe one can import the generated js file in some other js file that does the import job for you?
 
 https://discuss.moonbitlang.com/t/how-to-write-external-functions-variables-classes-from-third-party-js-libraries-when-targetting-to-js/216
+
+
+## FFI from JS
+
+Pass the implementation to import during WebAssembly instantiation.
+
+```
+const { instance: { exports } } = await WebAssembly.instantiateStreaming(
+  fetch(new URL("../target/wasm-gc/release/build/main/main.wasm", import.meta.url)),
+  {
+    xxx: {
+      foo: () => 1
+    }
+  }
+);
+
+const ret = exports.run()
+```
+
+The types of arguments and return values can use Int (and later mentioned externref).
+
+```
+fn xxx_foo() -> Int = "xxx" "foo"
+
+pub fn run() -> Int {
+  let v = xxx_foo()
+  v + 1
+}
+```
+
+When compiling this run function, it must be compiled with moon build --target wasm-gc, specifying the functions to be published as follows.
+
+```
+{
+  "link": {
+    "wasm-gc": {
+      "exports": ["run"]
+    }
+  }
+}
+```
 
 ## Declare Foreign Reference
 
