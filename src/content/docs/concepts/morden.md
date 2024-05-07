@@ -15,7 +15,7 @@ js vs moonbit
 
 ![alt text](https://www.moonbitlang.com/assets/images/JS-Moonbit-36343be1325790b26490bd610a14fb0e.png)
 
-## 更好的新年
+## 更好的性能
 
 ![alt text](https://www.moonbitlang.com/assets/images/Iter_comp-84c6f22f28f9e048875f39ae6cb7be3a.png)
 
