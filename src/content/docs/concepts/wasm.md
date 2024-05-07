@@ -31,9 +31,16 @@ WebAssembly 被设计为可以和 JavaScript 一起协同工作——通过使�
 
 而且，更棒的是，这是由 [W3C WebAssembly 工作组](https://www.w3.org/wasm/)和[社区组](https://www.w3.org/community/webassembly/)开发的 Web 标准，并得到了来自各大主要浏览器厂商的积极参与。
 
-## Why?
+## Wasm on server
 
+It is here that Wasm’s heritage makes it perfect for serverless functions. When we talk about Wasm as “built for the browser,” we are really talking about a few key features that make Wasm a good fit for the browser model:
 
+- Fast startup time. Nobody wants to wait for a page to load.
+- Cross-architecture, cross-operating system. Gone are the days when “Internet Explorer is required to view this page.”
+- Compact binaries. When we’re moving our code across the internet, we don’t want to be sending big files.
+- Secure sandbox. A browser runs untrusted code on a daily basis. We rely on the browser to protect us from both bugs and hackers.
+
+Those four features just so happen to be desired traits for a serverless functions platform. We want zero-latency startup time. We don’t want to know or care about the architecture or operating system on which our function runs. (That’s the joy of serverless, right? We don’t have to care one iota about the server underneath!) We want our binaries to be compact so we can quickly package and upload them. And we want to know if it is safe to run our function in a multitenant cloud.
 
 ## Platform
 
@@ -42,7 +49,20 @@ Moonbit 和 WebAssembly 有两大主要用例：
 - 构建完整应用——整个 Web 应用都基于 Moonbit 开发！
 - 构建应用的组成部分——在现存的 JavaScript 前端中使用 Moonbit
 
+具体流程
+
+前端页面
+
+1. 使用moonbit编译成.wasm
+1. 在HTML中加载即可
+
+服务端
+
+1. 使用moonbit编译成.wasm
+1. 使用wasmedge等运行时去执行
+1. 打包发布：docker或者faas
 
 ## Further reading
 
 - 更多内容，参考 https://developer.mozilla.org/zh-CN/docs/WebAssembly
+- https://chai2010.cn/post/2022/wasm2022/
