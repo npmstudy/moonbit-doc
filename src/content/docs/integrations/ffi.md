@@ -7,6 +7,10 @@ You can use foreign function in MoonBit through FFI to interact with the hosting
 
 https://www.moonbitlang.com/docs/ffi-and-wasm-host
 
+目前支持wasm和js作为后端的ffi。有2种定义方式。
+
+- 双字符串：fn f(args) = "a" "b" → a.b(args)
+- 内联JS：extern "js" fn f(args) = #| (args) => {}
 
 ## ffi mvp
 
